@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="woods.androiddisckioskapp" >
+
+    <uses-sdk android:minSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".KioskControlFullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".choose_disc_image"
+            android:label="@string/title_activity_choose_disc_image"
+            android:parentActivityName=".KioskControlFullscreenActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.BURN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="woods.androiddisckioskapp.KioskControlFullscreenActivity" />
+        </activity>
+        <activity
+            android:name=".return_disc"
+            android:label="@string/title_activity_return_disc"
+            android:parentActivityName=".KioskControlFullscreenActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.RETURN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="woods.androiddisckioskapp.KioskControlFullscreenActivity" />
+        </activity>
+        <activity
+            android:name=".panic"
+            android:label="@string/title_activity_panic"
+            android:parentActivityName=".KioskControlFullscreenActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.PANIC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="woods.androiddisckioskapp.KioskControlFullscreenActivity" />
+
+        </activity>
+    </application>
+
+</manifest>

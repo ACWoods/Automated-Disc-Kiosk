@@ -1,0 +1,318 @@
+<RelativeLayout
+    android:id="@+id/fullscreen_content_controls1"
+    style="?metaButtonBarStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black_overlay"
+    android:orientation="vertical"
+    tools:context="woods.androiddisckioskapp.KioskControlFullscreenActivity">
+
+    <Button android:id="@+id/return_disc_button" style="?metaButtonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/return_disc"
+        android:clickable="true"
+        android:longClickable="true"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:enabled="true" />
+
+    <Button android:id="@+id/burn_disc_button" style="?metaButtonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/burn_disc"
+        android:clickable="true"
+        android:longClickable="true"
+        android:focusableInTouchMode="false"
+        android:layout_gravity="bottom"
+        android:layout_above="@+id/return_disc_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:enabled="true" />
+
+    <Button android:id="@+id/panic_button" style="?metaButtonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/panic"
+        android:clickable="true"
+        android:longClickable="true"
+        android:focusableInTouchMode="false"
+        android:layout_gravity="bottom"
+        android:enabled="true"
+        android:layout_alignBottom="@+id/layout1"
+        android:layout_centerHorizontal="true" />
+
+    <GridLayout
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout1"
+        android:rowCount="5"
+        android:columnCount="4"
+        android:layout_above="@+id/burn_disc_button"
+        android:layout_marginTop="20dp">
+
+        <!--Buttons 0-3-->
+
+    </GridLayout>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="654dp"
+        android:gravity="center"
+        android:layout_column="0"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_row="0"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_0"
+            android:id="@+id/radioButton0"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="start"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_1"
+            android:id="@+id/radioButton1"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_2"
+            android:id="@+id/radioButton2"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_3"
+            android:id="@+id/radioButton3"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:onClick="onRadioButtonClicked"/>
+
+
+        <!--Buttons 4-7-->
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_4"
+            android:id="@+id/radioButton4"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_5"
+            android:id="@+id/radioButton5"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_6"
+            android:id="@+id/radioButton6"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_7"
+            android:id="@+id/radioButton7"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+
+        <!--Buttons 8-11-->
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_8"
+            android:id="@+id/radioButton8"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_9"
+            android:id="@+id/radioButton9"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_10"
+            android:id="@+id/radioButton10"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_11"
+            android:id="@+id/radioButton11"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+
+        <!--Buttons 12-15-->
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_12"
+            android:id="@+id/radioButton12"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_13"
+            android:id="@+id/radioButton13"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_14"
+            android:id="@+id/radioButton14"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_15"
+            android:id="@+id/radioButton15"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <!--Buttons 16-19-->
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_16"
+            android:id="@+id/radioButton16"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_17"
+            android:id="@+id/radioButton17"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_18"
+            android:id="@+id/radioButton18"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_19"
+            android:id="@+id/radioButton19"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+
+        <!--Buttons 20-24-->
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_20"
+            android:id="@+id/radioButton20"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_21"
+            android:id="@+id/radioButton21"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_22"
+            android:id="@+id/radioButton22"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_23"
+            android:id="@+id/radioButton23"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/demo"
+            android:id="@+id/radioButton24"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"/>
+
+    </RadioGroup>
+
+
+
+
+</RelativeLayout>
+
